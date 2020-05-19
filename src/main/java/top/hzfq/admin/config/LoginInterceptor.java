@@ -35,16 +35,16 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String username = (String) request.getSession().getAttribute(Constants.SESSION_USER);
-        if (StringUtils.isBlank(username)) {
-            reject(response, ResultEnum.USER_NOT_LOGIN);
-            return false;
-        }
-        User user = userService.getUserByUsername(username);
-        if (user == null) {
-            reject(response, ResultEnum.USER_ERROR);
-            return false;
-        }
+//        String username = (String) request.getSession().getAttribute(Constants.SESSION_USER);
+//        if (StringUtils.isBlank(username)) {
+//            reject(response, ResultEnum.USER_NOT_LOGIN);
+//            return false;
+//        }
+//        User user = userService.getUserByUsername(username);
+//        if (user == null) {
+//            reject(response, ResultEnum.USER_ERROR);
+//            return false;
+//        }
         return true;
     }
 
